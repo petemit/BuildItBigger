@@ -1,3 +1,6 @@
+The Gradletask to run the instrumentation test is "myTest"
+
+
 # Gradle for Android and Java Final Project
 
 In this project, you will create an app with multiple flavors that uses

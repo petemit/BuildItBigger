@@ -60,11 +60,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-            resetFragment(null);
+        resetFragment(null);
 
-            if (isLoading) {
-                tellJoke(null);
-            }
+        if (isLoading) {
+            tellJoke(null);
+        }
 
     }
 
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         outState.putBoolean(getString(R.string.loading_state), isLoading);
-        if(task!=null){
+        if (task != null) {
             task.cancel(true);
         }
         super.onSaveInstanceState(outState);
