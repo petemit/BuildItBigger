@@ -57,10 +57,12 @@ dependencies {
     compile 'com.google.code.findbugs:jsr305:2.0.1'
 }
 
+
 task performTest {
     doLast{
 
     }
+    dependsOn ":backend:assemble"
     dependsOn ":backend:appengineRun"
     project(":backend").afterEvaluate { backend ->
         backend.extensions.appengine.daemon = true
@@ -72,8 +74,9 @@ task myTest{
         println 'done with test'
     }
     dependsOn performTest
-    finalizedBy ":backend:appengineStop"
 }
+
+myTest.finalizedBy ":backend:appengineStop"
 /*
 task runTests (dependsOn: ":backend:appengineRun"){
     project(":backend").afterEvaluate { backend ->
