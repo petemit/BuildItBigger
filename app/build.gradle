@@ -3,7 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.0'
-
+    dexOptions {
+        javaMaxHeapSize = "4g"
+    }
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 17
@@ -45,11 +47,14 @@ dependencies {
         exclude group: 'org.apache.httpcomponents'
     }
     compile 'com.google.appengine:appengine-tools-sdk:1.9.42'
-    compile 'com.google.http-client:google-http-client:1.22.0'
+    compile ('com.google.http-client:google-http-client:1.22.0'){
+        exclude group: 'org.apache.httpcomponents'
+    }
 
-    compile 'com.google.api-client:google-api-client-android:1.22.0'
+    compile ('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
     compile 'com.google.code.findbugs:jsr305:2.0.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
 
 task performTest {
