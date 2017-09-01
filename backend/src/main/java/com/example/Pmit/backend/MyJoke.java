@@ -1,4 +1,4 @@
-package com.example.Pmit.backend;
+package com.example.pmit.backend;
 
 /**
  * The object model for the data we are sending through endpoints

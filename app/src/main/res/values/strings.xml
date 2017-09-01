@@ -10,4 +10,5 @@
     <string name="try_again">Try Again</string>
     <string name="task_fragment">task_fragment</string>
     <string name="loading_state">loading_state</string>
+    <string name="coming_back">coming_back</string>
 </resources>

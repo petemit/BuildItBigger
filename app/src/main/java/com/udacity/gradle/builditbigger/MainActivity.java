@@ -15,8 +15,9 @@ import android.widget.TextView;
 
 
 import com.example.pmit.backend.myApi.MyApi;
-import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 
+
+import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.petemit.example.android.jokedisplay.JokeDisplayActivity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 
@@ -43,15 +44,26 @@ public class MainActivity extends AppCompatActivity {
             isLoading = savedInstanceState.getBoolean(getString(R.string.loading_state));
         }
 
+
         errorTextView = (TextView) findViewById(R.id.tv_error);
         progressBar = (ProgressBar) findViewById(R.id.pb_loading_indicator);
         fragment = findViewById(R.id.fragment);
         tryAgainButton = (Button) findViewById(R.id.tryAgainButton);
+        resetFragment(null);
         if (isLoading) {
             tellJoke(null);
-        } else {
-            resetFragment(null);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+            resetFragment(null);
+
+            if (isLoading) {
+                tellJoke(null);
+            }
+
     }
 
     public void resetFragment(View v) {

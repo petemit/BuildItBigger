@@ -40,4 +40,12 @@ public class JokeDisplayActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.putExtra(getString(R.string.coming_back),true);
+        setResult(RESULT_OK,intent);
+        super.onBackPressed();
+    }
 }

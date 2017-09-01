@@ -4,14 +4,13 @@
    https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloEndpoints
 */
 
-package com.example.Pmit.backend;
+package com.example.pmit.backend;
 
 import com.example.petemit.TellAJoke;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
 
-import javax.inject.Named;
 
 /**
  * An endpoint class we are exposing
@@ -20,8 +19,8 @@ import javax.inject.Named;
         name = "myApi",
         version = "v1",
         namespace = @ApiNamespace(
-                ownerDomain = "backend.Pmit.example.com",
-                ownerName = "backend.Pmit.example.com",
+                ownerDomain = "backend.pmit.example.com",
+                ownerName = "backend.pmit.example.com",
                 packagePath = ""
         )
 )
