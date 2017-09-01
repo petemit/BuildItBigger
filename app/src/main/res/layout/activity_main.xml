@@ -22,6 +22,17 @@
         android:text="@string/error_loading_jokes"
         android:visibility="gone" />
 
+    <Button
+        android:id="@+id/tryAgainButton"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/text_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetFragment"
+        android:text="@string/try_again"
+        android:visibility="gone" />
+
     <ProgressBar
         android:id="@+id/pb_loading_indicator"
         android:layout_width="50dp"

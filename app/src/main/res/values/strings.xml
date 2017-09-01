@@ -7,4 +7,7 @@
     <string name="buy_premium_version">Buy Premium Version</string>
     <string name="buy_toast">Link to Play store in Release Version</string>
     <string name="error_loading_jokes">Error Loading Jokes</string>
+    <string name="try_again">Try Again</string>
+    <string name="task_fragment">task_fragment</string>
+    <string name="loading_state">loading_state</string>
 </resources>
